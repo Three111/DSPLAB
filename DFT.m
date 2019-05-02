@@ -1,0 +1,15 @@
+Fs=1000;
+t=0:1/Fs:1-1/Fs;
+f1=2;
+x1=0.5*cos(2*pi*f1*t+0.2);
+subplot(2,1,1);
+plot(x1);
+xlabel('Sample');
+ylabel('Amplitude');
+X1=fft(x1);
+subplot(2,1,2);
+CC=abs(X1)
+plot([0:length(X1)-1],abs(X1));
+ylabel('magnitude');
+xlabel('Bins');
+abs(X1(3));
